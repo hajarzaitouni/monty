@@ -58,7 +58,7 @@ void _pall(stack_t **stack, unsigned int line_number)
  * _pint - prints the value at the top of the stack
  *
  * @stack: a double pointer to the top of the stack
- * line_number: the line number in monty file
+ * @line_number: the line number in monty file
  */
 
 void _pint(stack_t **stack, unsigned int line_number)
