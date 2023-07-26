@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -41,5 +42,6 @@ void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void execute(FILE *file_d);
 void get_opcode_func(stack_t **stack, unsigned int line_number, char *opc);
+void free_dllist(stack_t *stack);
 
 #endif
