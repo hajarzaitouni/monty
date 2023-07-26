@@ -41,6 +41,7 @@ typedef struct instruction_s
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
+void _pop(stack_t **stack, unsigned int line_number);
 void execute(FILE *file_d);
 void get_opcode_func(stack_t **stack, unsigned int line_number, char *opc);
 void free_dllist(stack_t *stack);
