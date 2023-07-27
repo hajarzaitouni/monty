@@ -59,3 +59,27 @@ void _nop(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	(void)line_number;
 }
+
+/**
+ *  _sub - subtracts the top element from the second top element of the stack
+ *
+ *  @stack: a double pointer to the to of the stack
+ *  @line_number: the line number is monty file
+ */
+
+void _sub(stack_t **stack, unsigned int line_number)
+{
+	int result;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
+		free_dllist(*stack);
+		exit(EXIT_FAILURE);
+	}
+
+	result = (*stack)->next->n - (*stack)->n;
+	(*stack)->next->n = result;
+
+	_pop(stack, line_number);
+}
