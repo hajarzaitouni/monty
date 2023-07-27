@@ -17,4 +17,16 @@
 0.  push, pall
  Implement the push and pall opcodes:
     * push: push elements to stack
-    * pall: print all the elements of the stack    
+    * pall: print all the elements of the stack
+1. pint
+ Implement the pint opcode:
+    * pint: prints the value at the top of the stack
+2. pop
+ Implement the pop opcode:
+    * pop: take off the top element of the stack
+3. swap
+ Implement the swap opcode:
+    * swap: The top two elements of the stack swap
+4. add
+ Implement the add opcode:
+    * add: joins the top two elements of the stack
