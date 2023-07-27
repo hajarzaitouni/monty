@@ -44,6 +44,7 @@ void _pint(stack_t **stack, unsigned int line_number);
 void _pop(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
 void execute(FILE *file_d);
 void get_opcode_func(stack_t **stack, unsigned int line_number, char *opc);
 void free_dllist(stack_t *stack);
