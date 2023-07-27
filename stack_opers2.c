@@ -19,7 +19,7 @@ void _add(stack_t **stack, unsigned int line_number)
 	}
 
 	temp = (*stack)->next;
-	add = (*stack)-> + temp->n;
-	temp-> = add;
+	add = (*stack)->n + temp->n;
+	temp->n = add;
 	_pop(stack, line_number);
 }
