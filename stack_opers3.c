@@ -23,3 +23,34 @@ void _mul(stack_t **stack, unsigned int line_number)
 
 	_pop(stack, line_number);
 }
+
+/**
+ * _mod - calcultes the remainder of division
+ *
+ * @stack: a double pointer to the top of stack
+ * @line_number: the line number in monty file
+ */
+
+void _mod(stack_t **stack, unsigned int line_number)
+{
+	int remainder;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%u: can't mod, stack too short\n", line_number);
+		free_dlist(*stack);
+		exit(EXIT_FAILURE);
+	}
+
+	if ((*stack)->n  == 0)
+	{
+		fprintf(stderr, "L%u, division by zero\n", line_number);
+		free_dllist(*stack);
+		exit(EXIT_FAILURE);
+	}
+
+	remainder = (*stack)->next->n % (*stack)->n;
+	(*stack)->next->n = remainder;
+
+	_pop(stack, line_number);
+}
