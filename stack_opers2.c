@@ -108,7 +108,7 @@ void _div(stack_t **stack, unsigned int line_number)
 		free_dllist(*stack);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	result = (*stack)->next->n / (*stack)->n;
 	(*stack)->next->n = result;
 	_pop(stack, line_number);
