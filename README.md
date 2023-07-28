@@ -30,3 +30,17 @@
 4. add
  Implement the add opcode:
     * add: joins the top two elements of the stack
+5. nop
+    * nop: doesn't do anything
+6. sub
+    * sub: subtracts the top element of the stack from the second top element of the stack
+7. div
+    * div: divides the second top element of the stack by the top element of the stack
+8. mul
+    * mul: the second top element of the stack multiplies with the top element of the stack
+9. mod
+    * mod: calculates the remainder of dividing the second top element of the stack by the top element of the stack
+10. pchar
+    * pchar: prints the char at the top of the stack, followed by a new line
+11. pstr
+    * pstr: prints the string starting at the top of the stack, followed by a new line  
